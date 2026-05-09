@@ -25,13 +25,13 @@
   </div>
 </div>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold text-warning" href="index.html">Savoria</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg main-navbar sticky-top">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" href="index.html"><i class="fas fa-utensils me-2"></i>Savoria</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon" style="filter:invert(1)"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navMenu">
+    <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
@@ -45,15 +45,22 @@
   </div>
 </nav>
 
-<div class="hero-static position-relative">
-  <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&q=80" class="d-block w-100 hero-slide" alt="Fine Dining" />
-  <div class="carousel-caption">
-    <h1>Experience Fine Dining</h1>
-    <p>Crafted with passion, served with love</p>
-    <a href="reservation.html" class="btn btn-warning fw-bold mt-2">Book a Table</a>
+<div class="hero-static position-relative vh-100 overflow-hidden">
+
+  <div class="position-absolute w-100 h-100" 
+       style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&q=80') center/cover no-repeat;">
+  </div>
+
+
+  <div class="container h-100 position-relative d-flex align-items-center justify-content-center text-center text-white">
+    <div class="col-lg-8">
+      <h1 class="display-3 fw-bold mb-3">Experience Fine Dining</h1>
+      <p class="lead mb-4 opacity-90">Crafted with passion, served with love.</p>
+      <a href="reservation.html" class="btn btn-warning btn-lg fw-bold px-5 py-3 shadow">Book a Table</a>
+    </div>
   </div>
 </div>
-
 <section class="py-5">
   <div class="container text-center">
     <h2 class="section-heading mb-2">Special Dishes</h2>

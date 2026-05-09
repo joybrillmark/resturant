@@ -27,10 +27,19 @@ body {
   padding: 16px 14px !important;
 }
 
-.navbar .nav-link:hover,
+.navbar .nav-link {
+  color: #ccc !important;
+}
+
+.navbar .nav-link:hover {
+  color: var(--primary) !important;
+  background: transparent;
+}
+
 .navbar .nav-link.active {
-  background: #f0a500;
-  color: #111 !important;
+  color: var(--primary) !important;
+  background: transparent;
+  border-bottom: 2px solid var(--primary);
 }
 
 .hero-slide {
