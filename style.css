@@ -1,0 +1,365 @@
+:root {
+  --primary: #f0a500;
+  --dark: #111111;
+  --light-bg: #f8f5f0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.top-bar {
+  background: #111;
+  color: #ccc;
+  font-size: 0.83rem;
+  padding: 6px 0;
+}
+
+.top-bar a {
+  color: #f0a500;
+  text-decoration: none;
+}
+
+.navbar .nav-link {
+  text-transform: uppercase;
+  font-size: 0.88rem;
+  padding: 16px 14px !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  background: #f0a500;
+  color: #111 !important;
+}
+
+.hero-slide {
+  height: 520px;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.carousel-caption h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.section-heading {
+  font-size: 1.9rem;
+  font-weight: 700;
+  border-bottom: 3px solid #f0a500;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.card-img-top {
+  height: 190px;
+  object-fit: cover;
+}
+
+.price {
+  color: #f0a500;
+  font-weight: 700;
+}
+
+.chef-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f0a500;
+}
+
+.footer-top {
+  background: #111;
+  color: #aaa;
+}
+
+.footer-top h5 {
+  color: #f0a500;
+}
+
+.footer-top a {
+  color: #aaa;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+
+.footer-top a:hover {
+  color: #f0a500;
+}
+
+.page-banner {
+  background: #1a1a2e;
+  color: #fff;
+  padding: 50px 0 35px;
+}
+
+.page-banner h2 {
+  color: #f0a500;
+  font-weight: 700;
+}
+
+.zoom-box {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.zoom-box img {
+  width: 100%;
+  transition: transform 0.4s;
+  display: block;
+}
+
+.zoom-box:hover img {
+  transform: scale(1.5);
+}
+
+.qty-btn {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.qty-input {
+  width: 46px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 34px;
+}
+
+#datetime-display {
+  font-size: 0.8rem;
+}
+
+/* ── NAVBAR ── */
+.main-navbar {
+  background: var(--dark);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.main-navbar .navbar-brand {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.main-navbar .navbar-brand:hover {
+  color: #fff;
+}
+
+/* ── PAGE HERO (breadcrumb banner) ── */
+.page-hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+  color: #fff;
+  padding: 55px 0 38px;
+  border-bottom: 3px solid var(--primary);
+}
+
+.page-hero h2 {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.page-hero .breadcrumb-item a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.page-hero .breadcrumb-item.active,
+.page-hero .breadcrumb-item + .breadcrumb-item::before {
+  color: #ccc;
+}
+
+/* ── GOLD BUTTON ── */
+.btn-gold {
+  background: var(--primary);
+  color: var(--dark);
+  font-weight: 700;
+  border: 2px solid var(--primary);
+  border-radius: 6px;
+  transition: background 0.25s, color 0.25s;
+}
+
+.btn-gold:hover {
+  background: #c98a00;
+  border-color: #c98a00;
+  color: #fff;
+}
+
+/* ── IMAGE ZOOM CONTAINER ── */
+.zoom-container {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 2px solid #e5e5e5;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+  cursor: zoom-in;
+}
+
+.zoom-container img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.zoom-container:hover img {
+  transform: scale(1.45);
+}
+
+/* Thumbnail active border */
+.thumb-img {
+  border: 2px solid transparent !important;
+  transition: border-color 0.2s;
+}
+
+.thumb-img:hover {
+  border-color: var(--primary) !important;
+}
+
+/* ── SECTION TITLE ── */
+.section-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--dark);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+/* ── DISH CARDS (related dishes) ── */
+.dish-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dish-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.14);
+}
+
+.dish-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+/* ── NAV TABS (description / nutrition / reviews) ── */
+#dishTab .nav-link {
+  color: #555;
+  font-weight: 600;
+  border: none;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  padding: 10px 20px;
+}
+
+#dishTab .nav-link.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  background: transparent;
+}
+
+#dishTab .nav-link:hover {
+  color: var(--primary);
+}
+
+/* ── NUTRITION TABLE ── */
+.nutrition-table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.nutrition-table tbody tr:nth-child(even) {
+  background: #fdf6e3;
+}
+
+/* ── BIG FOOTER ── */
+.big-footer {
+  background: #111;
+  color: #aaa;
+}
+
+.big-footer h5 {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.big-footer a {
+  color: #aaa;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 6px;
+  font-size: 0.92rem;
+  transition: color 0.2s;
+}
+
+.big-footer a:hover {
+  color: var(--primary);
+}
+
+.big-footer p.small {
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* ── FOOTER BOTTOM BAR ── */
+.footer-bottom {
+  background: #000;
+  color: #666;
+  padding: 14px 0;
+  font-size: 0.85rem;
+}
+
+/* ── SOCIAL ICONS ── */
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #222;
+  color: #aaa;
+  margin-right: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.25s, color 0.25s;
+}
+
+.social-icons a:hover {
+  background: var(--primary);
+  color: var(--dark);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .hero-slide { height: 280px; }
+  .carousel-caption h1 { font-size: 1.6rem; }
+  .zoom-container img { height: 260px; }
+  .page-hero h2 { font-size: 1.5rem; }
+}

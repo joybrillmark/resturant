@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – Savoria Restaurant</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+<div class="top-bar">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+    <div class="d-flex gap-3 flex-wrap">
+      <span><i class="fas fa-envelope me-1"></i><a href="mailto:info@savoria.com">info@savoria.com</a></span>
+      <span><i class="fas fa-phone me-1"></i>+1 (555) 987-6543</span>
+      <span id="datetime-display"></span>
+    </div>
+    <div class="d-flex gap-3">
+      <a href="reservation.html"><i class="fas fa-calendar-check me-1"></i>Reservation</a>
+      <a href="login.html"><i class="fas fa-sign-in-alt me-1"></i>Login</a>
+      <a href="signup.html"><i class="fas fa-user-plus me-1"></i>Register</a>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-expand-lg main-navbar sticky-top">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" href="index.html"><i class="fas fa-utensils me-2"></i>Savoria</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon" style="filter:invert(1)"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="signup.html">Register</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <h2 class="mb-2">Member Login</h2>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Login</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+
+<section class="form-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-md-7">
+        <div class="form-card">
+          <div class="text-center mb-4">
+            <div class="mb-3">
+              <span style="background:var(--primary);width:64px;height:64px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;">
+                <i class="fas fa-sign-in-alt fa-2x" style="color:var(--dark)"></i>
+              </span>
+            </div>
+            <h3 class="fw-bold" style="color:var(--dark)">Welcome Back</h3>
+            <p class="text-muted">Sign in to access your Savoria account.</p>
+          </div>
+
+          <form id="login-form" novalidate>
+            <div class="mb-3">
+              <label class="form-label" for="login-username">Username <span class="text-danger">*</span></label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                <input type="text" class="form-control" id="login-username" placeholder="Enter your username" required />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="login-password">Password <span class="text-danger">*</span></label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                <input type="password" class="form-control" id="login-password" placeholder="Enter your password" required />
+                <button class="btn btn-outline-secondary" type="button" id="toggle-login-pass"><i class="fas fa-eye"></i></button>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="remember-me" />
+                <label class="form-check-label small" for="remember-me">Remember me</label>
+              </div>
+              <a href="#" class="small" style="color:var(--primary)">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn btn-gold w-100 py-2 fw-bold">
+              <i class="fas fa-sign-in-alt me-2"></i>Sign In
+            </button>
+            <hr class="my-4" />
+            <p class="text-center text-muted small mb-0">Don't have an account? <a href="signup.html" style="color:var(--primary);font-weight:600">Create one</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+>
+<div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background:var(--dark);color:#fff;border:none">
+        <h5 class="modal-title"><i class="fas fa-check-circle me-2" style="color:var(--primary)"></i>Login Successful</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center py-4">
+        <div class="mb-3">
+          <i class="fas fa-user-circle fa-4x" style="color:var(--primary)"></i>
+        </div>
+        <h4 class="fw-bold mb-1">Welcome Back!</h4>
+        <p class="text-muted">You have successfully signed in to your Savoria account.</p>
+        <p class="text-muted small">Redirecting you to the homepage...</p>
+      </div>
+      <div class="modal-footer border-0 justify-content-center gap-2">
+        <a href="index.html" class="btn btn-gold px-4">Go to Home</a>
+        <button type="button" class="btn btn-outline-secondary px-4" data-bs-dismiss="modal">Stay Here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="big-footer pt-5 pb-3">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-3">
+        <h5><i class="fas fa-utensils me-2"></i>Savoria</h5>
+        <p class="small">Fine dining at its finest.</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <h5>Quick Links</h5>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="reservation.html">Reservation</a>
+        <a href="signup.html">Register</a>
+      </div>
+      <div class="col-md-3">
+        <h5>Opening Hours</h5>
+        <p class="small">Mon – Fri: 11:00 AM – 10:00 PM</p>
+        <p class="small">Sat – Sun: 10:00 AM – 11:00 PM</p>
+      </div>
+      <div class="col-md-3">
+        <h5>Contact</h5>
+        <p class="small"><i class="fas fa-phone me-2"></i>+1 (555) 987-6543</p>
+        <p class="small"><i class="fas fa-envelope me-2"></i>info@savoria.com</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="footer-bottom text-center">
+  <div class="container">
+    <p class="mb-0">&copy; 2025 Savoria Restaurant. All rights reserved.</p>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
+<script>
+  
+  document.getElementById('toggle-login-pass').addEventListener('click', function () {
+    const pwd = document.getElementById('login-password');
+    const icon = this.querySelector('i');
+    if (pwd.type === 'password') {
+      pwd.type = 'text';
+      icon.className = 'fas fa-eye-slash';
+    } else {
+      pwd.type = 'password';
+      icon.className = 'fas fa-eye';
+    }
+  });
+</script>
+</body>
+</html>
